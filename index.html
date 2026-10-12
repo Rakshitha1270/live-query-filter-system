@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Query Filter System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">FULL-STACK SEARCH</p>
+      <h1>Live Query Filter System</h1>
+      <p class="subtitle">Search with debounce, filter by category and browse paginated results.</p>
+    </header>
+
+    <section class="filters">
+      <div class="search-box">
+        <label for="search">Search</label>
+        <input id="search" type="search" list="suggestions"
+               placeholder="Type Laptop, Python, Sports..." autocomplete="off">
+        <datalist id="suggestions"></datalist>
+      </div>
+
+      <div>
+        <label>Categories</label>
+        <div id="categories" class="categories"></div>
+      </div>
+    </section>
+
+    <div class="result-head">
+      <span id="resultCount">Loading...</span>
+      <span id="loading"></span>
+    </div>
+
+    <section id="results" class="grid"></section>
+
+    <nav class="pagination">
+      <button id="prev">Previous</button>
+      <span id="pageInfo">Page 1</span>
+      <button id="next">Next</button>
+    </nav>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
